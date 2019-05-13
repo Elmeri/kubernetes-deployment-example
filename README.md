@@ -19,7 +19,7 @@ kubectl config use-context docker-for-desktop
 
 ## Task 2: Build your image and push it to docker hub
 
-Ensure you are logged in to Docker hub with
+First, let's open terminal and navigate to the root of the repository we want to build. Then ensure you are logged in to Docker hub with
 
 ```
 docker login
@@ -60,7 +60,7 @@ kubectl get deployments
 Lastly, expose your deployment with:
 
 ```
-kubectl expose deployment/react-lesson-2 --type="NodePort" --port 8000
+kubectl expose deployment/react-lesson-2 --type="NodePort" --port <desired-port>
 ```
 
 Get the port number of the exposed service with
@@ -69,4 +69,4 @@ Get the port number of the exposed service with
 kubectl get services
 ```
 
-Now navigate to to localhost:\<port-number\>
+The command should output the service name and the port mapping associated with it. Now navigate to to localhost:\<port-number\> . You should be able to see your application now.
